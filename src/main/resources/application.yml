@@ -3,9 +3,9 @@ spring:
     active: dev
 
 server:
-  port: 6880
+  port: 6882
   servlet:
-    context-path: /code-snippets-api
+    context-path: /api
 knife4j:
   enable: true
   setting:

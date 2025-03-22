@@ -5,11 +5,11 @@ spring:
     username: root
     password: Zkqa123.com
 
-#knife4j:
-#  basic:
-#    enable: false # 本地不开启
-#    password: 123123
-#    username: admin
+knife4j:
+  basic:
+    enable: false # 本地不开启
+    password: 123123
+    username: admin
 
 app:
   password: 123123
