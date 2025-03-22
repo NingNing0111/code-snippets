@@ -7,7 +7,8 @@ use reqwest::header::HeaderMap;
 use crate::{ApiResponse, get_app_conf};
 
 pub async fn delete(id: u64) -> Result<()> {
-    let client = reqwest::Client::new();
+    let client = reqwest::ClientBuilder::new().no_proxy().build()?;
+    // let client = reqwest::Client::new();
     let config = get_app_conf()?;
     let mut headers = HeaderMap::new();
     headers.insert("Content-Type", "application/json".parse().unwrap());
@@ -26,6 +27,8 @@ pub async fn delete(id: u64) -> Result<()> {
         .json(&data)
         .send()
         .await?;
+    log::info!("{:?}", response);
+
     let json_str = response.text().await?;
     let res: ApiResponse = serde_json::from_str(&json_str)
         .context(anyhow!("HttpResponse parse fail! {}", json_str))?;
