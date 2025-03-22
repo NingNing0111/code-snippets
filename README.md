@@ -1,6 +1,6 @@
 # 我的代码记忆片段库
 
-- 演示地址:[https://code.pgthinker.me](https://code.pthinker.me)
+- 演示地址:[https://code.pgthinker.me](https://code.pgthinker.me)
 
 ![img.png](doc/images/1.png)
 
